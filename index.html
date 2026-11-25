@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Letter For You ♡</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="hearts"></div>
+
+<main>
+
+<section class="screen active" id="welcome">
+    <div class="eyebrow">a little something from me to you</div>
+    <h1>Hello, Langga. ♡</h1>
+    <p>I have something to tell you. I made you a little story.</p>
+    <div class="envelope" onclick="openStory()">💌</div>
+    <p class="small">There is a little surprise waiting inside.</p>
+    <button class="primary" onclick="openStory()">Open my letter ♡</button>
+</section>
+
+<section class="screen" id="intro">
+    <div class="eyebrow">chapter one · the beginning</div>
+    <div class="card">
+        <h2>Where do I even begin?</h2>
+        <p>Maybe I should start by saying that I never really expected to find myself here, making a whole website just to tell someone how much they mean to me.</p>
+        <p>But here I am. And somehow, you became someone I wanted to make something special for.</p>
+        <p>I could have simply sent you a message, but I wanted to do something a little different. Something you could click through, smile at, and hopefully remember.</p>
+        <button class="primary" onclick="next('meeting')">Continue my story →</button>
+    </div>
+</section>
+
+<section class="screen" id="meeting">
+    <div class="eyebrow">chapter two · the little things</div>
+    <div class="card">
+        <h2>Then, there was you.</h2>
+        <p>I don't know if you realize how effortlessly you caught my attention. There was just something about you that made me want to know more.</p>
+        <p>The more we talked, the more I found myself looking forward to hearing from you. Little conversations became moments I wanted to keep.</p>
+        <p>And without even noticing, you started becoming someone I genuinely looked forward to.</p>
+        <button class="primary" onclick="next('question')">There's more... →</button>
+    </div>
+</section>
+
+<section class="screen" id="question">
+    <div class="eyebrow">a tiny question for you</div>
+    <div class="card">
+        <h2>Can I ask you something?</h2>
+        <p>Have you ever made someone smile without even trying?</p>
+        <div class="choices">
+            <button class="choice" onclick="answer('yes')">Maybe I have? ♡</button>
+            <button class="choice" onclick="answer('no')">I don't think so.</button>
+        </div>
+        <div id="response"></div>
+        <button class="primary" id="questionNext" style="display:none" onclick="next('feelings')">Tell me more →</button>
+    </div>
+</section>
+
+<section class="screen" id="feelings">
+    <div class="eyebrow">chapter three · what I feel</div>
+    <div class="card">
+        <h2>Here's what I want you to know.</h2>
+        <p>I like getting to know you. I like discovering the little things that make you who you are. I like hearing about your day, your thoughts, your dreams, and even the random things you feel like sharing.</p>
+        <p>I don't expect everything to be perfect. I know getting to know someone takes time, patience, understanding, and effort.</p>
+        <p>I just want the opportunity to show you that my intentions are sincere. Not only through words, but through the way I treat you.</p>
+        <button class="primary" onclick="next('secret')">I have a secret... →</button>
+    </div>
+</section>
+
+<section class="screen" id="secret">
+    <div class="eyebrow">a little secret</div>
+    <div class="card">
+        <h2>Something I don't say enough.</h2>
+        <p>Click the little heart. There's something inside it.</p>
+        <button class="primary heart-button" onclick="revealSecret()">♡</button>
+        <div class="note" id="secretNote" style="display:none">If you could see yourself through my eyes, maybe you'd understand why I find you so special. ♡</div>
+        <button class="primary" onclick="next('promise')">One last thing →</button>
+    </div>
+</section>
+
+<section class="screen" id="promise">
+    <div class="eyebrow">chapter four · my intentions</div>
+    <div class="card">
+        <h2>I don't want to rush you.</h2>
+        <p>I want you to know that I'm not here to make promises just because they sound beautiful. I want my actions to speak for me.</p>
+        <p>I want to learn how to understand you, respect your boundaries, celebrate your happiness, and be someone you can feel comfortable being yourself around.</p>
+        <p>Whatever your answer may be, I want you to feel free to be honest with me. Your feelings matter, too.</p>
+        <button class="primary" onclick="next('final')">I'm ready to ask you something ♡</button>
+    </div>
+</section>
+
+<section class="screen" id="final">
+    <div class="eyebrow">the moment I've been waiting for</div>
+    <div class="card">
+        <div class="flower">🌷</div>
+        <h1>So, Patricia Angela...</h1>
+        <h2>May I court you?</h2>
+        <p>I'd love the chance to pursue you sincerely, get to know you even more, and show you how much I genuinely care.</p>
+        <p>No pressure. No need to have the perfect answer. I just wanted to ask you in a way that comes straight from my heart.</p>
+        <div class="choices">
+            <button class="primary" onclick="finalAnswer('yes')">Yes, you may. ♡</button>
+            <button class="choice" onclick="finalAnswer('maybe')">Let's take our time.</button>
+            <button class="choice" onclick="finalAnswer('no')">I'm not ready.</button>
+        </div>
+        <div id="finalResponse"></div>
+    </div>
+</section>
+
+</main>
+
+<footer>made with love, just for you ♡</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
